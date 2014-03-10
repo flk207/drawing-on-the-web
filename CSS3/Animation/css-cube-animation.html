@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 
 <html>
 
 	<head>
 		<meta charset="UTF-8">
-		<title>CSS3 Cube</title>
+		<title>CSS3 Dice</title>
 		<style>
 			.container {
 				width: 200px;
@@ -20,15 +21,10 @@
 				-webkit-transition-duration: 2s;
 			}
 
-			.container:active {
-				transform: rotate3d(0, 0, 1, 180deg);
-				-webkit-transform: rotate3d(0, 0, 1, 180deg);
-			}
 
 			.cube, .cube2, .cube3, .cube4, .cube5 {
 				position: relative;
 				width: 200px;
-				opacity: 0.7;
 				transform-style: preserve-3d;
 				-webkit-transform-style: preserve-3d;
 				animation: spin 4s;
@@ -79,23 +75,23 @@
 			}
 
 			@keyframes spin {
-				from {transform: rotateY(0deg);}
-				to {transform: rotateY(360deg);}
+				from {transform: rotateY(0deg) rotateX(0deg);}
+				to {transform: rotateY(360deg) rotateX(360deg);}
 			}
 
 			@-webkit-keyframes spin {
-				from {-webkit-transform: rotateY(0deg);}
-				to {-webkit-transform: rotateY(360deg);}
+				from {-webkit-transform: rotateY(0deg) rotateX(0deg);}
+				to {-webkit-transform: rotateY(360deg) rotateX(360deg);}
 			}
 
 			.back {
-				background-color: red;
+				background-image:url(six.jpg);
 				transform: translateZ(-100px) rotateY(180deg);
 				-webkit-transform: translateZ(-100px) rotateY(180deg);
 			}
 
 			.right {
-				background-color: orange;
+				background-image:url(four.jpg);
 				transform: rotateY(-270deg) translateX(100px);
 				-webkit-transform: rotateY(-270deg) translateX(100px);
 				transform-origin: top right;
@@ -103,7 +99,7 @@
 			}
 
 			.left {
-				background-color: yellow;
+				background-image:url(three.jpg);
 				transform: rotateY(270deg) translateX(-100px);
 				-webkit-transform: rotateY(270deg) translateX(-100px);
 				transform-origin: center left;
@@ -111,7 +107,7 @@
 			}
 
 			.top {
-				background-color: green;
+				background-image:url(two.jpg);
 				transform: rotateX(-90deg) translateY(-100px);
 				-webkit-transform: rotateX(-90deg) translateY(-100px);
 				transform-origin: top center;
@@ -119,7 +115,7 @@
 			}
 
 			.bottom {
-				background-color: blue;
+				background-image:url(five.jpg);
 				transform: rotateX(90deg) translateY(100px);
 				-webkit-transform: rotateX(90deg) translateY(100px);
 				transform-origin: bottom center;
@@ -127,7 +123,7 @@
 			}
 
 			.front {
-				background-color: purple;
+				background-image:url(one.jpg);
 				transform: translateZ(100px);
 				-webkit-transform: translateZ(100px);
 			}
